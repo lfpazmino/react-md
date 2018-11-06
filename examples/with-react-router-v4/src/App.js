@@ -35,8 +35,7 @@ class App extends Component {
           <NavigationDrawer
             drawerTitle="react-md with CRA"
             toolbarTitle="Welcome to react-md"
-            navItems={navItems.map(props => <NavLink {...props} key={props.to} />)}
-          >
+            navItems={navItems.map(props => <NavLink {...props} location={location} key={props.to} />)}>
             <Switch key={location.key}>
               <Route exact path="/" location={location} component={Home} />
               <Route path="/page-1" location={location} component={Page1} />
